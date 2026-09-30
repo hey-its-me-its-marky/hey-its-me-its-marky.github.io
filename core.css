@@ -209,44 +209,6 @@ body {
         visibility var(--anim);
 }
 
-.overlay.open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
-.wall {
-    width: min(60vw, 900px);
-    min-height: 60vh;
-    max-height: 90vh;
-
-    overflow: auto;
-
-    opacity: 0;
-
-    transform: translateY(30px) scale(.92);
-
-    box-shadow: 0 30px 30px alpha(from var(--fg) / 10%);
-
-    transition:
-        opacity var(--anim),
-        transform var(--anim);
-}
-
-.overlay.open .wall {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-.preview {
-    flex: 1;
-
-    min-height: 300px;
-
-    background-image: url(mesh.webp);
-    border-radius: var(--pd-lrg);
-}
-
 .close {
     position: fixed;
     right: var(--pd-md);
@@ -266,8 +228,6 @@ body {
 .close:hover,
 .close:focus {
     border-radius: 100%;
-    background-color: var(--crd);
-    color: var(--ac);
 }
 
 @media (max-width: 600px) {
